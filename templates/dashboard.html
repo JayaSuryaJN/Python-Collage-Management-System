@@ -1,0 +1,38 @@
+<html>
+
+       <head>
+                <title>todo 1|Dasdboard</title>
+       </head>
+
+       <body>
+                <h1>Student Details</h1>
+                <a href="/form">Add students details</a> 
+                <br><br>
+                <table border="1">
+
+                            <tr>
+                                 <th>Name</th>
+                                 <th>Rollno</th>
+		                 <th>Class</th>
+                                 <th>Mark</th>
+				 <th>Edit</th>
+			         <th>Delete</th>
+			    </tr>
+
+                    {% for x in d:%}	
+			    <tr>
+				  <td>{{x.1}}</td>
+				  <td>{{x.2}}</td>
+				  <td>{{x.3}}</td>
+                                  <td>{{x.4}}</td>
+                                  <td><a href="/edit/{{x.0}}">Edit</a></td>
+                                  <td><a href="/delete/{{x.0}}">Delete</a></td>
+			    </tr>
+                   
+		 {% endfor %}
+
+                 </table>
+        </body>
+
+</html>
+
